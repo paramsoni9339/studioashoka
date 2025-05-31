@@ -1,17 +1,19 @@
 {
   "version": 2,
-  "routes": [
+  "builds": [
     {
-      "src": "^/static/(.*)",
-      "dest": "/static/$1"
-    },
-    {
-      "src": "^/public/(.*)",
-      "dest": "/public/$1"
-    },
-    {
-      "src": ".*",
-      "dest": "/index.html"
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
+      }
     }
+  ],
+  "routes": [
+    { "src": "/bhavin", "dest": "/bhavin.html" },
+    { "src": "^/public/(.*)", "dest": "/public/$1" },
+    { "src": "^/static/(.*)", "dest": "/static/$1" },
+    { "src": "/", "dest": "/index.html" },
+    { "src": "/(.*)", "dest": "/$1" }
   ]
 }

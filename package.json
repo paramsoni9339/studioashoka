@@ -2,10 +2,9 @@
   "name": "studio-ashoka",
   "version": "1.0.0",
   "description": "Studio Ashoka - Photography Studio Website",
-  "main": "index.html",
   "scripts": {
     "start": "serve",
-    "build": "echo 'No build required'"
+    "build": "mkdir -p dist && cp -r index.html bhavin.html public b_ico.jpg home_hero.mp4 dist/"
   },
   "dependencies": {
     "serve": "^14.2.0"
